@@ -6,6 +6,8 @@ FROM raspbian/stretch
 
 LABEL maintainer="Ken.Lasko@gmail.com"
 
+ENV  DEBIAN_FRONTEND noninteractive
+
 RUN apt-get update
 # Install libraries necessary for PowerShell
 RUN apt-get install --no-install-recommends -y libunwind8 libicu57 libcurl4-openssl-dev cron
